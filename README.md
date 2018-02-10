@@ -6,3 +6,6 @@ Adicionar promoção "Muito Queijo" - se tiver duas porções de queijo, ganhe a
 Adicionar promoção "Dobro de Carne Ganha Bacon" - se tiver 2 carnes 1 bacon sai de graça.<br />
 A promoção "Muito Queijo" deve ser prioritária em relação à "Seja Light".<br />
 Inflação! Os ingredientes sofrem alteração de preços com frequência!
+
+#Detalhes
+A solução atual permite promoções acumulativas.
