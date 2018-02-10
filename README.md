@@ -8,4 +8,4 @@ A promoção "Muito Queijo" deve ser prioritária em relação à "Seja Light".<
 Inflação! Os ingredientes sofrem alteração de preços com frequência!
 
 #Detalhes
-A solução atual permite promoções acumulativas!
+A solução atual permite promoções acumulativas.
