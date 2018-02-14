@@ -21,8 +21,8 @@ var descontos = []desconto.Desconto{
 	desconto.DobroDeCarneGanhaBacon{},
 }
 
-//AdicionarIngrediente adiciona um lanche ao pedido
-func (pedido *Pedido) AdicionarIngrediente(lanche *lanche.Lanche) {
+//AdicionarLanche adiciona um lanche ao pedido
+func (pedido *Pedido) AdicionarLanche(lanche *lanche.Lanche) {
 	var sumDesconto float32
 	for _, desconto := range descontos {
 		sumDesconto += desconto.ValorDesconto(*lanche)

@@ -13,7 +13,7 @@ func TestPedirUmXBurger(t *testing.T) {
 	var lanche = lanche.XBurger()
 
 	var pedido Pedido
-	pedido.AdicionarIngrediente(&lanche)
+	pedido.AdicionarLanche(&lanche)
 
 	var actual = pedido.Total()
 	var expected float32 = 4.5
@@ -29,7 +29,7 @@ func TestPedirUmXBurgerComInflacao(t *testing.T) {
 	var lanche = lanche.XBurger()
 
 	var pedido Pedido
-	pedido.AdicionarIngrediente(&lanche)
+	pedido.AdicionarLanche(&lanche)
 
 	var actual = pedido.Total()
 	var expected float32 = 4.95
@@ -46,7 +46,7 @@ func TestPedirUmXBurgerComInflacaoSobreInflacao(t *testing.T) {
 	var lanche = lanche.XBurger()
 
 	var pedido Pedido
-	pedido.AdicionarIngrediente(&lanche)
+	pedido.AdicionarLanche(&lanche)
 
 	var actual = pedido.Total()
 	var expected float32 = 5.94
@@ -60,8 +60,8 @@ func TestPedirUmXBurgerEUmXBacon(t *testing.T) {
 	var lanche2 = lanche.XBacon()
 
 	var pedido Pedido
-	pedido.AdicionarIngrediente(&lanche1)
-	pedido.AdicionarIngrediente(&lanche2)
+	pedido.AdicionarLanche(&lanche1)
+	pedido.AdicionarLanche(&lanche2)
 
 	var actual = pedido.Total()
 	var expected float32 = 11
@@ -77,9 +77,9 @@ func TestPedirUmXBurgerEUmXBaconUmSejaLight(t *testing.T) {
 	lanche3.AdicionarIngrediente(ingrediente.Alface())
 
 	var pedido Pedido
-	pedido.AdicionarIngrediente(&lanche1)
-	pedido.AdicionarIngrediente(&lanche2)
-	pedido.AdicionarIngrediente(&lanche3)
+	pedido.AdicionarLanche(&lanche1)
+	pedido.AdicionarLanche(&lanche2)
+	pedido.AdicionarLanche(&lanche3)
 
 	var actual = pedido.Total()
 	var expected float32 = 15.41
@@ -98,10 +98,10 @@ func TestPedirUmXBurgerEUmXBaconUmSejaLightUmMuitoQueijo(t *testing.T) {
 	lanche4.AdicionarIngrediente(ingrediente.Queijo())
 
 	var pedido Pedido
-	pedido.AdicionarIngrediente(&lanche1)
-	pedido.AdicionarIngrediente(&lanche2)
-	pedido.AdicionarIngrediente(&lanche3)
-	pedido.AdicionarIngrediente(&lanche4)
+	pedido.AdicionarLanche(&lanche1)
+	pedido.AdicionarLanche(&lanche2)
+	pedido.AdicionarLanche(&lanche3)
+	pedido.AdicionarLanche(&lanche4)
 
 	var actual = pedido.Total()
 	var expected float32 = 21.41
@@ -123,11 +123,11 @@ func TestPedirUmXBurgerEUmXBaconUmSejaLightUmMuitoQueijoEUmDobroCarneGanhaQueijo
 	lanche5.AdicionarIngrediente(ingrediente.HamburgerCarne())
 
 	var pedido Pedido
-	pedido.AdicionarIngrediente(&lanche1)
-	pedido.AdicionarIngrediente(&lanche2)
-	pedido.AdicionarIngrediente(&lanche3)
-	pedido.AdicionarIngrediente(&lanche4)
-	pedido.AdicionarIngrediente(&lanche5)
+	pedido.AdicionarLanche(&lanche1)
+	pedido.AdicionarLanche(&lanche2)
+	pedido.AdicionarLanche(&lanche3)
+	pedido.AdicionarLanche(&lanche4)
+	pedido.AdicionarLanche(&lanche5)
 
 	var actual = pedido.Total()
 	var expected float32 = 28.91
@@ -143,7 +143,7 @@ func TestPedirUmMuitoQueijoESejaLight(t *testing.T) {
 	lanche.AdicionarIngrediente(ingrediente.Queijo())
 
 	var pedido Pedido
-	pedido.AdicionarIngrediente(&lanche)
+	pedido.AdicionarLanche(&lanche)
 
 	var actual = pedido.Total()
 	var expected float32 = 5.61
